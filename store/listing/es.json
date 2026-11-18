@@ -1,0 +1,17 @@
+{
+  "description": "Rectangle Copy te permite seleccionar y copiar una zona rectangular de una página web, algo que la selección de texto normal no puede hacer.\n\nMantén pulsado Alt y arrastra el ratón. Aparece un rectángulo y se resalta lo que se va a copiar. Suelta el ratón: el texto ya está en el portapapeles.\n\n• Tablas: copia celdas enteras, p. ej. una sola columna (precios, nombres, códigos) sin el resto de la fila. Las celdas combinadas se tratan correctamente y las filas ocultas se omiten.\n• Todo lo demás: el texto del rectángulo se copia línea por línea, como la selección en bloque de los editores de código. Se conserva la sangría del código.\n• Columnas separadas por tabuladores (para pegar directamente en Excel o Hojas de cálculo de Google) o alineadas con espacios (para el Bloc de notas y texto plano).\n• Cerca del borde de la ventana, la página se desplaza sola. Esc cancela.\n• Elige la tecla (Alt, Alt + Mayús o Ctrl + Alt) y desactiva la extensión en los sitios donde no la necesites.\n• Disponible en español, inglés, polaco, alemán, francés, italiano y ucraniano.\n\nPrivacidad: todo ocurre en tu ordenador. La extensión no recopila datos, no muestra anuncios y no realiza conexiones de red. El código es abierto (MIT): https://github.com/pitprivel/rectangle-copy\n\nRectangle Copy es gratuito. Si te ahorra tiempo, puedes invitarme a un café: https://buycoffee.to/puzzelki-po-godzinach",
+  "captions": [
+    ["Copia una sola columna de una tabla", "Mantén pulsado Alt y arrastra: solo se copian las celdas del rectángulo"],
+    ["Suelta: ya está en el portapapeles", "Pégalo en el Bloc de notas, en Excel o donde quieras"],
+    ["Funciona con cualquier texto, también código", "Línea por línea, se conserva la sangría"],
+    ["Configuración e interruptor por sitio", "Elige la tecla y cómo separar las columnas"]
+  ],
+  "promo": "Copia una sola columna de cualquier tabla",
+  "pasted": "Texto pegado",
+  "tableTitle": "Pedido 1024",
+  "head": ["Producto", "Código", "Cant.", "Precio"],
+  "items": ["Pan de centeno", "Leche entera", "Mantequilla", "Queso gouda", "Manzanas (1 kg)", "Café en grano"],
+  "currency": "EUR",
+  "prices": [2.49, 1.19, 2.79, 3.99, 2.49, 9.99],
+  "textTitle": "Notas"
+}

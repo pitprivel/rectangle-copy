@@ -4,6 +4,8 @@
 
 Dodatek do Brave, Chrome, Edge i innych przeglądarek opartych na Chromium. **Przytrzymaj Alt i przeciągnij myszą** – na stronie rysuje się prostokąt, a po puszczeniu myszy jego zawartość jest już w schowku jako zwykły tekst. Idealne do kopiowania **jednej kolumny tabeli**, czego zwykłe zaznaczanie nie potrafi.
 
+![Zaznaczanie kolumny „Price” przez Alt + przeciągnięcie](docs/screenshot-1.jpg)
+
 - **Tabele:** kopiowane są całe komórki. Komórki scalone (`colspan`/`rowspan`) pojawiają się raz, ukryte wiersze są pomijane, a łamania wierszy w komórce zamieniają się na spacje. Kolumny rozdziela tabulator (dla arkuszy) albo wyrównanie spacjami (dla notatnika).
 - **Reszta strony:** znaki w prostokącie, linia po linii – jak zaznaczanie blokowe w edytorach kodu. W czcionce o stałej szerokości (kod, `<pre>`) zostają wcięcia.
 - Podczas przeciągania podświetla się to, co zostanie skopiowane. Przy krawędzi okna albo przewijanego pola strona sama się przewija. **Esc** anuluje. Przeciąganie zaczęte na linku nie otwiera go.

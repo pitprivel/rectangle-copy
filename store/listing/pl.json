@@ -1,0 +1,17 @@
+{
+  "description": "Rectangle Copy pozwala zaznaczyć i skopiować prostokątny fragment strony – coś, czego zwykłe zaznaczanie tekstu nie potrafi.\n\nPrzytrzymaj Alt i przeciągnij myszą. Pojawi się prostokąt, a to, co zostanie skopiowane, podświetli się. Puść mysz – tekst jest już w schowku.\n\n• Tabele: kopiujesz całe komórki, np. tylko jedną kolumnę (ceny, nazwy, kody) bez reszty wiersza. Komórki scalone są obsługiwane poprawnie, a ukryte wiersze pomijane.\n• Reszta strony: tekst z prostokąta kopiowany jest linia po linii, jak zaznaczanie blokowe w edytorach kodu. W kodzie zostają wcięcia.\n• Kolumny rozdzielone tabulatorem (wklejasz prosto do Excela albo Arkuszy Google) albo wyrównane spacjami (do notatnika i zwykłego tekstu).\n• Przy krawędzi okna strona sama się przewija. Esc anuluje.\n• Wybierz klawisz (Alt, Alt + Shift albo Ctrl + Alt) i wyłącz dodatek na stronach, na których go nie potrzebujesz.\n• Dostępny po polsku, angielsku, niemiecku, francusku, włosku, hiszpańsku i ukraińsku.\n\nPrywatność: wszystko dzieje się na Twoim komputerze. Dodatek nie zbiera danych, nie wyświetla reklam i nie łączy się z internetem. Kod jest otwarty (MIT): https://github.com/pitprivel/rectangle-copy\n\nRectangle Copy jest darmowy. Jeśli oszczędza Ci czas, możesz postawić mi kawę: https://buycoffee.to/puzzelki-po-godzinach",
+  "captions": [
+    ["Skopiuj tylko jedną kolumnę tabeli", "Przytrzymaj Alt i przeciągnij – kopiowane są tylko komórki w prostokącie"],
+    ["Puść mysz – już jest w schowku", "Wklej do notatnika, Excela albo gdziekolwiek indziej"],
+    ["Działa na każdym tekście, także na kodzie", "Linia po linii, z zachowaniem wcięć"],
+    ["Ustawienia i wyłączanie na stronie", "Wybierz klawisz i sposób rozdzielania kolumn"]
+  ],
+  "promo": "Skopiuj jedną kolumnę z dowolnej tabeli",
+  "pasted": "Wklejony tekst",
+  "tableTitle": "Zamówienie 1024",
+  "head": ["Produkt", "Kod", "Ilość", "Cena"],
+  "items": ["Chleb żytni", "Mleko 3,2%", "Masło", "Ser gouda", "Jabłka (1 kg)", "Kawa ziarnista"],
+  "currency": "PLN",
+  "prices": [5.49, 3.20, 8.99, 12.30, 4.50, 39.90],
+  "textTitle": "Notatki"
+}

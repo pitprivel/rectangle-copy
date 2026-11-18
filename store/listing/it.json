@@ -1,0 +1,17 @@
+{
+  "description": "Rectangle Copy ti permette di selezionare e copiare un’area rettangolare di una pagina web – cosa che la normale selezione del testo non sa fare.\n\nTieni premuto Alt e trascina il mouse. Appare un rettangolo e ciò che verrà copiato viene evidenziato. Rilascia il mouse: il testo è già negli appunti.\n\n• Tabelle: copia celle intere, ad es. una sola colonna (prezzi, nomi, codici) senza il resto della riga. Le celle unite sono gestite correttamente e le righe nascoste vengono saltate.\n• Tutto il resto: il testo nel rettangolo viene copiato riga per riga, come la selezione a blocchi degli editor di codice. L’indentazione del codice viene mantenuta.\n• Colonne separate da tabulazioni (da incollare direttamente in Excel o Fogli Google) o allineate con spazi (per Blocco note e testo semplice).\n• Vicino al bordo della finestra la pagina scorre da sola. Esc annulla.\n• Scegli il tasto (Alt, Alt + Maiusc o Ctrl + Alt) e disattiva l’estensione sui siti in cui non ti serve.\n• Disponibile in italiano, inglese, polacco, tedesco, francese, spagnolo e ucraino.\n\nPrivacy: tutto avviene sul tuo computer. L’estensione non raccoglie dati, non mostra pubblicità e non effettua richieste di rete. Il codice è open source (MIT): https://github.com/pitprivel/rectangle-copy\n\nRectangle Copy è gratuito. Se ti fa risparmiare tempo, puoi offrirmi un caffè: https://buycoffee.to/puzzelki-po-godzinach",
+  "captions": [
+    ["Copia una sola colonna di una tabella", "Tieni premuto Alt e trascina: vengono copiate solo le celle nel rettangolo"],
+    ["Rilascia: è già negli appunti", "Incolla nel Blocco note, in Excel o dove vuoi"],
+    ["Funziona con qualsiasi testo, anche il codice", "Riga per riga, l’indentazione resta"],
+    ["Impostazioni e interruttore per sito", "Scegli il tasto e come separare le colonne"]
+  ],
+  "promo": "Copia una sola colonna di qualsiasi tabella",
+  "pasted": "Testo incollato",
+  "tableTitle": "Ordine 1024",
+  "head": ["Prodotto", "Codice", "Qtà", "Prezzo"],
+  "items": ["Pane di segale", "Latte intero", "Burro", "Gouda", "Mele (1 kg)", "Caffè in grani"],
+  "currency": "EUR",
+  "prices": [2.49, 1.19, 2.79, 3.99, 2.49, 9.99],
+  "textTitle": "Appunti"
+}

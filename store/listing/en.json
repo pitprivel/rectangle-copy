@@ -1,0 +1,17 @@
+{
+  "description": "Rectangle Copy lets you select and copy a rectangular area of a web page – something normal text selection can’t do.\n\nHold Alt and drag with the mouse. A rectangle appears and what will be copied is highlighted. Release the mouse – the text is already in your clipboard.\n\n• Tables: copy whole cells, e.g. just one column (prices, names, codes) without the rest of each row. Merged cells are handled correctly and hidden rows are skipped.\n• Everything else: the text inside the rectangle is copied line by line, like block selection in code editors. Indentation in code is kept.\n• Columns separated by tabs (paste straight into Excel or Google Sheets) or aligned with spaces (for Notepad and plain text).\n• The page scrolls by itself near the edge of the window. Esc cancels.\n• Choose the key (Alt, Alt + Shift or Ctrl + Alt) and turn the extension off on sites where you don’t need it.\n• Available in English, Polish, German, French, Italian, Spanish and Ukrainian.\n\nPrivacy: everything happens on your computer. The extension collects no data, shows no ads and makes no network requests. The code is open source (MIT): https://github.com/pitprivel/rectangle-copy\n\nRectangle Copy is free. If it saves you time, you can buy me a coffee: https://buycoffee.to/puzzelki-po-godzinach",
+  "captions": [
+    ["Copy just one column of a table", "Hold Alt and drag – only the cells inside the rectangle are copied"],
+    ["Release – it’s already in the clipboard", "Paste it into Notepad, Excel or anywhere else"],
+    ["Works on any text, code included", "Copied line by line, indentation is kept"],
+    ["Settings and a per-site switch", "Choose the key and how columns are separated"]
+  ],
+  "promo": "Copy a single column of any table",
+  "pasted": "Pasted text",
+  "tableTitle": "Order 1024",
+  "head": ["Product", "Code", "Qty", "Price"],
+  "items": ["Rye bread", "Whole milk", "Butter", "Gouda cheese", "Apples (1 kg)", "Coffee beans"],
+  "currency": "USD",
+  "prices": [3.49, 1.99, 4.29, 5.49, 2.89, 11.90],
+  "textTitle": "Notes"
+}

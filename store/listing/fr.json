@@ -1,0 +1,17 @@
+{
+  "description": "Rectangle Copy vous permet de sélectionner et de copier une zone rectangulaire d’une page web – ce que la sélection de texte habituelle ne sait pas faire.\n\nMaintenez Alt et faites glisser la souris. Un rectangle apparaît et ce qui sera copié est mis en évidence. Relâchez la souris : le texte est déjà dans le presse-papiers.\n\n• Tableaux : copiez des cellules entières, par ex. une seule colonne (prix, noms, codes) sans le reste de la ligne. Les cellules fusionnées sont gérées correctement et les lignes masquées sont ignorées.\n• Tout le reste : le texte contenu dans le rectangle est copié ligne par ligne, comme la sélection en bloc des éditeurs de code. L’indentation du code est conservée.\n• Colonnes séparées par des tabulations (à coller directement dans Excel ou Google Sheets) ou alignées avec des espaces (pour le Bloc-notes et le texte brut).\n• Près du bord de la fenêtre, la page défile toute seule. Échap annule.\n• Choisissez la touche (Alt, Alt + Maj ou Ctrl + Alt) et désactivez l’extension sur les sites où vous n’en avez pas besoin.\n• Disponible en français, anglais, polonais, allemand, italien, espagnol et ukrainien.\n\nConfidentialité : tout se passe sur votre ordinateur. L’extension ne collecte aucune donnée, n’affiche aucune publicité et n’effectue aucune requête réseau. Le code est open source (MIT) : https://github.com/pitprivel/rectangle-copy\n\nRectangle Copy est gratuit. S’il vous fait gagner du temps, vous pouvez m’offrir un café : https://buycoffee.to/puzzelki-po-godzinach",
+  "captions": [
+    ["Copiez une seule colonne d’un tableau", "Maintenez Alt et faites glisser : seules les cellules du rectangle sont copiées"],
+    ["Relâchez : c’est déjà dans le presse-papiers", "Collez dans le Bloc-notes, Excel ou ailleurs"],
+    ["Fonctionne avec tout texte, même le code", "Ligne par ligne, l’indentation est conservée"],
+    ["Paramètres et interrupteur par site", "Choisissez la touche et le séparateur de colonnes"]
+  ],
+  "promo": "Copiez une seule colonne de n’importe quel tableau",
+  "pasted": "Texte collé",
+  "tableTitle": "Commande 1024",
+  "head": ["Produit", "Code", "Qté", "Prix"],
+  "items": ["Pain de seigle", "Lait entier", "Beurre", "Gouda", "Pommes (1 kg)", "Café en grains"],
+  "currency": "EUR",
+  "prices": [2.49, 1.19, 2.79, 3.99, 2.49, 9.99],
+  "textTitle": "Notes"
+}

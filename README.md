@@ -4,6 +4,9 @@
 
 A browser extension for Brave, Chrome, Edge and other Chromium browsers. **Hold Alt and drag** to draw a rectangle on the page – when you release the mouse, its contents are already in the clipboard as plain text. Perfect for copying **a single column of a table**, which normal text selection can’t do.
 
+![Selecting the Price column with Alt + drag](docs/screenshot-1.jpg)
+![The column is copied and pasted as plain text](docs/screenshot-2.jpg)
+
 - **Tables:** whole cells are copied. Merged cells (`colspan`/`rowspan`) appear once, hidden rows are skipped, line breaks inside a cell become spaces. Columns are separated by tabs (good for spreadsheets) or aligned with spaces (good for Notepad).
 - **Everything else:** characters inside the rectangle are copied line by line, like block selection in code editors. Indentation in monospaced text (code, `<pre>`) is kept.
 - What will be copied is highlighted while you drag. The page scrolls by itself near the edge of the window or of a scrollable box. **Esc** cancels. Dragging that starts on a link doesn’t open it.

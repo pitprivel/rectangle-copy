@@ -19,6 +19,7 @@
     "test": "node test/unit.test.mjs && node scripts/build.mjs --test && node test/e2e.test.mjs",
     "test:unit": "node test/unit.test.mjs",
     "serve": "node test/serve.mjs",
+    "store:assets": "node scripts/store-assets.mjs",
     "key": "node scripts/keygen.mjs"
   },
   "devDependencies": {

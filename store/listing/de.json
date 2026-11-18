@@ -1,0 +1,17 @@
+{
+  "description": "Mit Rectangle Copy wählen und kopieren Sie einen rechteckigen Bereich einer Webseite – das kann die normale Textauswahl nicht.\n\nHalten Sie Alt gedrückt und ziehen Sie mit der Maus. Ein Rechteck erscheint, und was kopiert wird, ist hervorgehoben. Lassen Sie die Maustaste los – der Text ist bereits in der Zwischenablage.\n\n• Tabellen: Kopieren Sie ganze Zellen, z. B. nur eine Spalte (Preise, Namen, Codes) ohne den Rest der Zeile. Verbundene Zellen werden korrekt behandelt, ausgeblendete Zeilen übersprungen.\n• Alles andere: Der Text im Rechteck wird Zeile für Zeile kopiert, wie die Blockauswahl in Code-Editoren. Einrückungen im Code bleiben erhalten.\n• Spalten getrennt durch Tabulatoren (direkt in Excel oder Google Tabellen einfügen) oder mit Leerzeichen ausgerichtet (für Editor und reinen Text).\n• Am Fensterrand scrollt die Seite automatisch. Esc bricht ab.\n• Wählen Sie die Taste (Alt, Alt + Umschalt oder Strg + Alt) und deaktivieren Sie die Erweiterung auf Websites, auf denen Sie sie nicht brauchen.\n• Verfügbar auf Deutsch, Englisch, Polnisch, Französisch, Italienisch, Spanisch und Ukrainisch.\n\nDatenschutz: Alles geschieht auf Ihrem Computer. Die Erweiterung erhebt keine Daten, zeigt keine Werbung und stellt keine Netzwerkverbindungen her. Der Code ist Open Source (MIT): https://github.com/pitprivel/rectangle-copy\n\nRectangle Copy ist kostenlos. Wenn es Ihnen Zeit spart, können Sie mir einen Kaffee spendieren: https://buycoffee.to/puzzelki-po-godzinach",
+  "captions": [
+    ["Nur eine Tabellenspalte kopieren", "Alt gedrückt halten und ziehen – nur die Zellen im Rechteck werden kopiert"],
+    ["Loslassen – schon in der Zwischenablage", "In Editor, Excel oder überall sonst einfügen"],
+    ["Funktioniert mit jedem Text, auch mit Code", "Zeile für Zeile, Einrückungen bleiben erhalten"],
+    ["Einstellungen und Schalter pro Website", "Taste und Spaltentrennung wählen"]
+  ],
+  "promo": "Eine einzelne Spalte aus jeder Tabelle kopieren",
+  "pasted": "Eingefügter Text",
+  "tableTitle": "Bestellung 1024",
+  "head": ["Produkt", "Code", "Menge", "Preis"],
+  "items": ["Roggenbrot", "Vollmilch", "Butter", "Gouda", "Äpfel (1 kg)", "Kaffeebohnen"],
+  "currency": "EUR",
+  "prices": [2.49, 1.19, 2.79, 3.99, 2.49, 9.99],
+  "textTitle": "Notizen"
+}

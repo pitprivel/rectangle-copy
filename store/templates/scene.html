@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rectangle Copy</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1280px; height: 800px; overflow: hidden; }
+    body { background: linear-gradient(160deg, #eff6ff 0%, #dbeafe 55%, #e0e7ff 100%); color: #0f172a;
+      font: 16px/1.45 "Segoe UI", system-ui, sans-serif; }
+    header { height: 180px; padding: 34px 64px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; color: #1e3a8a; font-size: 18px; }
+    .brand img { width: 30px; height: 30px; }
+    h1 { margin: 14px 0 6px; font-size: 40px; line-height: 1.15; letter-spacing: -0.5px; }
+    .sub { margin: 0; font-size: 21px; color: #334155; }
+    .stage { position: absolute; left: 64px; right: 64px; top: 196px; bottom: 48px; display: flex; gap: 32px; align-items: flex-start; }
+    .card { background: #fff; border-radius: 14px; box-shadow: 0 12px 40px rgba(30, 58, 138, 0.18); overflow: hidden; }
+    .card .bar { height: 38px; background: #f1f5f9; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 7px; padding: 0 14px; }
+    .card .bar i { width: 11px; height: 11px; border-radius: 50%; background: #cbd5e1; display: block; }
+    .card .bar span { margin-left: 10px; color: #64748b; font-size: 14px; }
+    .card .body { padding: 22px 26px 26px; }
+    h2 { margin: 0 0 14px; font-size: 22px; }
+    table { border-collapse: collapse; font-size: 20px; }
+    th, td { border-bottom: 1px solid #e2e8f0; padding: 11px 26px; text-align: left; white-space: nowrap; }
+    th { color: #475569; font-weight: 600; background: #f8fafc; }
+    td.num, th.num { text-align: right; }
+    .paste { width: 420px; }
+    .paste pre { margin: 0; font: 18px/1.5 Consolas, "DejaVu Sans Mono", monospace; min-height: 260px; color: #0f172a; }
+    .paste.hidden { visibility: hidden; }
+    .text { width: 900px; }
+    .text p { margin: 0 0 14px; color: #334155; font-size: 17px; }
+      .text pre { margin: 0; padding: 16px 18px; background: #f8fafc; border-radius: 8px; font: 20px/1.55 Consolas, "DejaVu Sans Mono", monospace; }
+    .popup { display: flex; align-items: flex-start; justify-content: center; width: 100%; }
+    .popup img { max-height: 556px; width: auto; border-radius: 12px; box-shadow: 0 16px 50px rgba(30, 58, 138, 0.28); }
+    [hidden] { display: none !important; }
+    #cursor { position: fixed; z-index: 2147483647; pointer-events: none; display: none; filter: drop-shadow(0 1px 2px rgba(0,0,0,.35)); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><img src="/dist-test/icons/icon128.png" alt="">Rectangle Copy</div>
+    <h1 id="cap"></h1>
+    <p class="sub" id="sub"></p>
+  </header>
+
+  <div class="stage" id="stage-table">
+    <div class="card">
+      <div class="bar"><i></i><i></i><i></i><span>example.com/orders/1024</span></div>
+      <div class="body">
+        <h2 id="tableTitle"></h2>
+        <table id="t"><thead><tr></tr></thead><tbody></tbody></table>
+      </div>
+    </div>
+    <div class="card paste hidden" id="paste">
+      <div class="bar"><i></i><i></i><i></i><span id="pastedTitle"></span></div>
+      <div class="body"><pre id="pasted"></pre></div>
+    </div>
+  </div>
+
+  <div class="stage" id="stage-text" hidden>
+    <div class="card text">
+      <div class="bar"><i></i><i></i><i></i><span>example.com/notes</span></div>
+      <div class="body">
+        <h2 id="textTitle"></h2>
+        <pre id="code">function total(items) {
+    let sum = 0;
+    for (const item of items) {
+        sum += item.price * item.qty;
+    }
+    return Math.round(sum * 100) / 100;
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="stage" id="stage-popup" hidden>
+    <div class="popup"><img id="popupImg" alt=""></div>
+  </div>
+
+  <svg id="cursor" viewBox="0 0 16 22" width="22" height="30"><path d="M1 1v17l4.5-4.2 3 6.7 3-1.3-3-6.6H15z" fill="#111" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></svg>
+  <script src="scene.js"></script>
+</body>
+</html>
