@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rectangle Copy</title>
+  <link rel="icon" href="../icons/icon32.png">
+  <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+  <main>
+    <header>
+      <img src="../icons/icon128.png" width="64" height="64" alt="">
+      <div>
+        <h1 data-i18n="welcomeTitle">Rectangle Copy is installed</h1>
+        <p class="lead" data-i18n="welcomeLead"></p>
+      </div>
+    </header>
+
+    <section class="how">
+      <div class="anim" aria-hidden="true">
+        <div class="key" id="animKey">Alt</div>
+        <div class="grid">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
+        <div class="sel"><svg class="cursor" viewBox="0 0 16 22" width="16" height="22"><path d="M1 1v17l4.5-4.2 3 6.7 3-1.3-3-6.6H15z" fill="#111" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
+        <div class="copied">✓</div>
+      </div>
+      <ol>
+        <li id="step1"></li>
+        <li data-i18n="step2"></li>
+        <li id="step3"></li>
+      </ol>
+    </section>
+
+    <section class="try">
+      <h2 data-i18n="tryTitle">Try it here</h2>
+      <p class="muted" data-i18n="tryHint"></p>
+      <table id="demo">
+        <thead><tr><th data-i18n="colProduct"></th><th data-i18n="colQty"></th><th data-i18n="colPrice"></th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="item1"></td><td>2</td><td class="price"></td></tr>
+          <tr><td data-i18n="item2"></td><td>1</td><td class="price"></td></tr>
+          <tr><td data-i18n="item3"></td><td>3</td><td class="price"></td></tr>
+          <tr><td data-i18n="item4"></td><td>1</td><td class="price"></td></tr>
+        </tbody>
+      </table>
+      <textarea id="paste" rows="5" aria-label="paste"></textarea>
+    </section>
+
+    <section>
+      <h2 data-i18n="tipsTitle">Good to know</h2>
+      <ul class="tips">
+        <li data-i18n="tip1"></li>
+        <li data-i18n="tip2"></li>
+        <li data-i18n="tip3"></li>
+        <li data-i18n="tip4"></li>
+        <li data-i18n="privacy"></li>
+      </ul>
+    </section>
+
+    <section class="coffee-box">
+      <p data-i18n="coffeeNote"></p>
+      <a id="coffee" class="coffee" target="_blank" rel="noopener"><span aria-hidden="true">☕</span> <span data-i18n="coffee">Buy me a coffee</span></a>
+    </section>
+  </main>
+  <script src="welcome.js"></script>
+  <!-- Ten sam skrypt co na stronach – żeby tabela powyżej dała się zaznaczyć. -->
+  <script src="../content.js"></script>
+</body>
+</html>

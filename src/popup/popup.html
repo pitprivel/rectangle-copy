@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rectangle Copy</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/icon32.png" width="20" height="20" alt="">
+    <h1>Rectangle Copy</h1>
+    <label class="switch"><input type="checkbox" id="enabled"> <span data-i18n="popupEnabled">Enabled</span></label>
+  </header>
+
+  <section id="site" hidden>
+    <label class="row"><input type="checkbox" id="siteOn"> <span id="siteLabel"></span></label>
+    <p class="hint" id="siteUnsupported" data-i18n="siteUnsupported" hidden>Not available on this page</p>
+  </section>
+
+  <fieldset>
+    <legend data-i18n="modifierLegend">Key to hold while dragging</legend>
+    <label class="row"><input type="radio" name="modifier" value="alt"> <span data-mod="alt"></span></label>
+    <label class="row"><input type="radio" name="modifier" value="alt+shift"> <span data-mod="alt+shift"></span></label>
+    <label class="row"><input type="radio" name="modifier" value="ctrl+alt"> <span data-mod="ctrl+alt"></span></label>
+    <p class="hint" data-i18n="hintAltGr"></p>
+    <p class="hint" data-i18n="hintPlatform"></p>
+  </fieldset>
+
+  <fieldset>
+    <legend data-i18n="separatorLegend">Separate table columns with</legend>
+    <label class="row"><input type="radio" name="separator" value="tab"> <span data-i18n="sepTab"></span></label>
+    <label class="row"><input type="radio" name="separator" value="spaces"> <span data-i18n="sepSpaces"></span></label>
+  </fieldset>
+
+  <label class="row"><input type="checkbox" id="toast"> <span data-i18n="toastOption"></span></label>
+  <p class="hint" data-i18n="optionsHint"></p>
+
+  <footer>
+    <a href="#" id="howTo" data-i18n="howToUse">How to use</a>
+    <a id="coffee" class="coffee" target="_blank" rel="noopener"><span aria-hidden="true">☕</span> <span data-i18n="coffee">Buy me a coffee</span></a>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>

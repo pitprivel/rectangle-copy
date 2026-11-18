@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Zaznaczanie prostokątne – strona testowa</title>
+  <style>
+    body { font: 15px/1.5 "Segoe UI", Arial, sans-serif; margin: 24px; max-width: 900px; }
+    table { border-collapse: collapse; margin: 12px 0 28px; }
+    td, th { border: 1px solid #bbb; padding: 4px 12px; text-align: left; }
+    th { background: #f1f5f9; }
+    pre { background: #f6f8fa; padding: 10px 14px; font: 14px/1.4 Consolas, monospace; }
+    .cols { display: flex; gap: 40px; }
+    .cols div { width: 160px; }
+    #scroller { height: 160px; overflow: auto; border: 1px solid #999; width: 420px; }
+    #scroller table { margin: 0; }
+    h2 { font-size: 17px; margin-top: 28px; }
+  </style>
+</head>
+<body>
+  <h1>Strona testowa</h1>
+  <p>Przytrzymaj <b>Alt</b> i przeciągnij myszą. Wynik wklej do notatnika.</p>
+
+  <h2>Tabela ze scaleniami</h2>
+  <table id="t1">
+    <thead><tr><th>Produkt</th><th>Ilość</th><th>Cena</th></tr></thead>
+    <tbody>
+      <tr><td>Chleb żytni</td><td>2</td><td rowspan="2">5,49 zł</td></tr>
+      <tr><td>Mleko</td><td>1</td></tr>
+      <tr><td colspan="2">Rabat łączny</td><td>-1,00 zł</td></tr>
+      <tr><td>Masło</td><td>3</td><td>8,99 zł</td></tr>
+      <tr style="display:none"><td>Ukryty</td><td>9</td><td>0 zł</td></tr>
+      <tr><td>Ser<br>gouda</td><td>1</td><td>12,30 zł</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Kod</h2>
+  <pre id="code">function suma(lista) {
+    let s = 0;
+    for (const x of lista) {
+        s += x;
+    }
+
+    return s;
+}</pre>
+
+  <h2>Kolumny z div-ów</h2>
+  <div class="cols" id="cols">
+    <div>Pierwsza kolumna<br>druga linia<br><a href="#link">link w tekście</a></div>
+    <div>Środkowa kolumna<br>z dwiema liniami</div>
+    <div>Trzecia kolumna</div>
+  </div>
+
+  <h2>Tabela w przewijanym kontenerze</h2>
+  <div id="scroller">
+    <table id="t2"><tbody></tbody></table>
+  </div>
+  <script>
+    const tb = document.querySelector('#t2 tbody');
+    for (let i = 1; i <= 60; i++) {
+      tb.insertAdjacentHTML('beforeend', `<tr><td>Wiersz ${i}</td><td>Kod-${String(i).padStart(3, '0')}</td><td>${i * 10} szt.</td></tr>`);
+    }
+  </script>
+  <div style="height: 1200px"></div>
+</body>
+</html>

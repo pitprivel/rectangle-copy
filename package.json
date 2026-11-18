@@ -1,0 +1,28 @@
+{
+  "name": "rectangle-copy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Hold Alt and drag to select a rectangle (e.g. a single table column) and copy it as text - browser extension for Brave, Chrome, Edge and other Chromium browsers",
+  "author": "pitprivel",
+  "license": "MIT",
+  "homepage": "https://github.com/pitprivel/rectangle-copy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pitprivel/rectangle-copy.git"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "pack": "node scripts/build.mjs && node scripts/pack.mjs",
+    "pack:store": "node scripts/check-release.mjs && node scripts/build.mjs --store && node scripts/pack.mjs --store",
+    "check:release": "node scripts/check-release.mjs",
+    "test": "node test/unit.test.mjs && node scripts/build.mjs --test && node test/e2e.test.mjs",
+    "test:unit": "node test/unit.test.mjs",
+    "serve": "node test/serve.mjs",
+    "key": "node scripts/keygen.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.0",
+    "puppeteer-core": "23.11.1"
+  }
+}

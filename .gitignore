@@ -1,0 +1,16 @@
+node_modules/
+dist/
+dist-test/
+dist-store/
+release/
+
+# Klucz prywatny dodatku - NIGDY nie publikować
+keys/
+*.pem
+
+.claude/
+.vscode/
+.idea/
+*.log
+Thumbs.db
+.DS_Store

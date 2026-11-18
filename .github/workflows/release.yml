@@ -1,0 +1,40 @@
+name: Release
+
+# Wydanie: podbij wersję w src/manifest.json i package.json, dopisz sekcję w CHANGELOG.md,
+# potem `git tag v1.2.3 && git push --tags`. Workflow sprawdza zgodność, uruchamia testy
+# i dołącza oba ZIP-y do wydania na GitHubie.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check:release
+      - name: Install Chrome for Testing
+        id: chrome
+        run: echo "path=$(npx @puppeteer/browsers install chrome@stable --path "$RUNNER_TEMP/browsers" | tail -1 | cut -d' ' -f2-)" >> "$GITHUB_OUTPUT"
+      - name: Install fonts
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends fonts-dejavu-core
+      - run: npm test
+        env:
+          BROWSER: ${{ steps.chrome.outputs.path }}
+      - run: npm run pack
+      - run: npm run pack:store
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          notes=$(awk -v v="$version" '$0 ~ "^## \\[" v "\\]" {f=1; next} /^## \[/ {f=0} f' CHANGELOG.md)
+          gh release create "$GITHUB_REF_NAME" release/rectangle-copy-*.zip --title "Rectangle Copy $version" --notes "$notes"

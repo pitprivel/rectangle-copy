@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Chrome for Testing (w odróżnieniu od zwykłego Chrome pozwala wczytać dodatek z folderu).
+      - name: Install Chrome for Testing
+        id: chrome
+        run: echo "path=$(npx @puppeteer/browsers install chrome@stable --path "$RUNNER_TEMP/browsers" | tail -1 | cut -d' ' -f2-)" >> "$GITHUB_OUTPUT"
+      - name: Install fonts
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends fonts-dejavu-core
+      - run: npm test
+        env:
+          BROWSER: ${{ steps.chrome.outputs.path }}
