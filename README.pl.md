@@ -16,7 +16,7 @@ Dodatek do Brave, Chrome, Edge i innych przeglądarek opartych na Chromium. **Pr
 
 ## Instalacja
 
-- **Chrome Web Store** – wkrótce.
+- **Chrome Web Store** – w trakcie weryfikacji.
 - **Ręcznie:** pobierz `rectangle-copy-<wersja>.zip` z [Releases](https://github.com/pitprivel/rectangle-copy/releases), rozpakuj do stałego folderu, otwórz `brave://extensions` (albo `chrome://extensions`), włącz **Tryb dewelopera** i kliknij **Załaduj rozpakowane**.
 
 ## Rozwój

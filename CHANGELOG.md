@@ -4,7 +4,7 @@ All notable changes to Rectangle Copy are documented here.
 The project follows [Semantic Versioning](https://semver.org/): **patch** (1.0.x) for bug fixes,
 **minor** (1.x.0) for new features and languages, **major** (x.0.0) for changes in how the extension works.
 
-## [1.0.0] – unreleased
+## [1.0.0] – 2026-11-18
 
 First public release.
 

@@ -17,7 +17,7 @@ A browser extension for Brave, Chrome, Edge and other Chromium browsers. **Hold 
 
 ## Install
 
-- **Chrome Web Store** – coming soon.
+- **Chrome Web Store** – in review.
 - **Manually:** download `rectangle-copy-<version>.zip` from [Releases](https://github.com/pitprivel/rectangle-copy/releases), unzip it to a permanent folder, open `brave://extensions` (or `chrome://extensions`), turn on **Developer mode** and click **Load unpacked**.
 
 ## Development
