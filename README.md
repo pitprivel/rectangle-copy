@@ -31,6 +31,7 @@ npm test            # unit tests + end-to-end tests in a real browser (headless)
 npm run serve       # test page for manual tries: http://localhost:8765/test/harness.html
 npm run pack        # release/rectangle-copy-<version>.zip        (manual install)
 npm run pack:store  # release/rectangle-copy-<version>-store.zip  (Chrome Web Store, no "key" field)
+npm run stats       # downloads of release files and repo traffic (needs GitHub CLI)
 ```
 
 End-to-end tests start Brave from its default Windows location; point `BROWSER` to another Chromium-based browser (e.g. Chrome for Testing) and set `HEADFUL=1` to watch them run. Branded Google Chrome 137+ can’t load unpacked extensions from the command line, so use Brave, Chromium or Chrome for Testing.

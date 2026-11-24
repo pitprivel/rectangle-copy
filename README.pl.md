@@ -30,6 +30,7 @@ npm test            # testy jednostkowe + testy w prawdziwej przeglądarce (head
 npm run serve       # strona testowa do ręcznych prób: http://localhost:8765/test/harness.html
 npm run pack        # release/rectangle-copy-<wersja>.zip        (instalacja ręczna)
 npm run pack:store  # release/rectangle-copy-<wersja>-store.zip  (Chrome Web Store, bez pola "key")
+npm run stats       # pobrania paczek z wydań i ruch w repo (wymaga GitHub CLI)
 ```
 
 Testy w przeglądarce uruchamiają Brave z domyślnej lokalizacji w Windows. Inną przeglądarkę wskażesz zmienną `BROWSER` (np. Chrome for Testing), a `HEADFUL=1` pokaże okno. Zwykły Google Chrome od wersji 137 nie wczytuje rozpakowanych dodatków z wiersza poleceń – użyj Brave, Chromium albo Chrome for Testing.

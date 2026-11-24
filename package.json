@@ -20,7 +20,8 @@
     "test:unit": "node test/unit.test.mjs",
     "serve": "node test/serve.mjs",
     "store:assets": "node scripts/store-assets.mjs",
-    "key": "node scripts/keygen.mjs"
+    "key": "node scripts/keygen.mjs",
+    "stats": "node scripts/stats.mjs"
   },
   "devDependencies": {
     "esbuild": "0.25.0",
