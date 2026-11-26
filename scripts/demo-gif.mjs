@@ -1,6 +1,6 @@
 // Animacja do postów (Reddit, Wykop, HN…), nagrana prawdziwym dodatkiem (dist-test) w Brave:
 //   store/out/demo-<lang>.gif  i  store/out/demo-<lang>.mp4
-// Kursor najeżdża na tabelę, wciśnięty Alt, przeciągnięcie po kolumnie cen, puszczenie → komunikat i wklejony tekst.
+// Część 1: kolumna cen (kursor, Alt, przeciągnięcie, komunikat i wklejony tekst). Część 2: dwie kolumny (Ilość + Cena).
 // Użycie: node scripts/demo-gif.mjs [en pl …]   (domyślnie en i pl). Wymaga ffmpeg w PATH.
 import fs from 'node:fs';
 import os from 'node:os';
@@ -16,6 +16,11 @@ const out = path.join(root, 'store', 'out');
 const browserPath = process.env.BROWSER || 'C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe';
 const langs = process.argv.slice(2).length ? process.argv.slice(2) : ['en', 'pl'];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+// Podpis drugiej części (dwie kolumny); brakujące języki – po angielsku.
+const CAPTION2 = {
+  en: ['Or several columns at once', 'Columns are separated by tabs – ready for Excel'],
+  pl: ['Albo kilka kolumn naraz', 'Kolumny rozdziela tabulator – od razu do Excela'],
+};
 
 execFileSync(process.execPath, [path.join(root, 'scripts/build.mjs'), '--test'], { stdio: 'inherit' });
 
@@ -130,10 +135,53 @@ for (const lang of langs) {
     await frame(0.8);
     await page.evaluate(() => window.setShot(2));
     await sleep(250);
-    await frame(2.8); // ffmpeg (concat) pokazuje ostatnią klatkę dwa razy dłużej → ok. 5,5 s
+    await frame(4.5);
 
     const copied = await page.evaluate(() => document.documentElement.dataset.rectSelectCopied);
     if (!copied || copied.split('\n').length !== 6) throw new Error(`${lang}: skopiowano „${copied}”`);
+
+    // Część 2: dwie kolumny naraz (Ilość + Cena).
+    await page.evaluate((c) => {
+      window.setShot(1);
+      document.getElementById('cap').textContent = c[0];
+      document.getElementById('sub').textContent = c[1];
+      document.getElementById('paste').classList.add('hidden');
+    }, CAPTION2[lang] || CAPTION2.en);
+    await sleep(150);
+    await frame(2.2);
+    const a2 = await cell(1, 3);
+    const sx2 = a2.x + 8, sy2 = a2.y + 4;
+    cx = ex; cy = ey;
+    for (let i = 1; i <= 16; i++) {
+      const t = i / 16, e = 1 - (1 - t) ** 3;
+      const x = cx + (sx2 - cx) * e, y = cy + (sy2 - cy) * e;
+      await page.mouse.move(x, y);
+      await cursor(x, y);
+      await frame(0.07);
+    }
+    await frame(0.6);
+    await page.keyboard.down('Alt');
+    await altKey(true);
+    await frame(1.3);
+    await page.mouse.down();
+    for (let i = 1; i <= steps; i++) {
+      const t = i / steps, e = t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2;
+      const x = sx2 + (ex - sx2) * e, y = sy2 + (ey - sy2) * e;
+      await page.mouse.move(x, y);
+      await cursor(x, y);
+      await sleep(16);
+      await frame(0.09);
+    }
+    await frame(1.6);
+    await page.mouse.up();
+    await page.keyboard.up('Alt');
+    await altKey(false);
+    await sleep(250);
+    await frame(2.8); // ffmpeg (concat) pokazuje ostatnią klatkę dwa razy dłużej → ok. 5,5 s
+
+    const copied2 = await page.evaluate(() => document.documentElement.dataset.rectSelectCopied);
+    const rows2 = copied2 ? copied2.split('\n') : [];
+    if (rows2.length !== 6 || !rows2.every((l) => l.split('\t').length === 2)) throw new Error(`${lang}: część 2 – „${copied2}”`);
 
     // ffmpeg: lista klatek z czasami → GIF (paleta) i MP4.
     const txt = path.join(frames, 'list.txt');
