@@ -96,40 +96,41 @@ for (const lang of langs) {
     // 1. Spokojny start, kursor z boku.
     let cx = 900, cy = 560;
     await cursor(cx, cy);
-    await frame(1.0);
+    await frame(2.0);
     // 2. Kursor jedzie do pierwszej ceny.
-    for (let i = 1; i <= 8; i++) {
-      const t = i / 8, e = 1 - (1 - t) ** 3;
+    for (let i = 1; i <= 16; i++) {
+      const t = i / 16, e = 1 - (1 - t) ** 3;
       const x = cx + (sx - cx) * e, y = cy + (sy - cy) * e;
       await page.mouse.move(x, y);
       await cursor(x, y);
-      await frame(0.05);
+      await frame(0.07);
     }
+    await frame(0.6);
     // 3. Alt w dół.
     await page.keyboard.down('Alt');
     await altKey(true);
-    await frame(0.6);
+    await frame(1.3);
     // 4. Przeciąganie po kolumnie.
     await page.mouse.down();
-    const steps = 18;
+    const steps = 32;
     for (let i = 1; i <= steps; i++) {
       const t = i / steps, e = t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2;
       const x = sx + (ex - sx) * e, y = sy + (ey - sy) * e;
       await page.mouse.move(x, y);
       await cursor(x, y);
       await sleep(16);
-      await frame(0.06);
+      await frame(0.09);
     }
-    await frame(0.7);
+    await frame(1.6);
     // 5. Puszczenie: komunikat i wklejony tekst.
     await page.mouse.up();
     await page.keyboard.up('Alt');
     await altKey(false);
     await sleep(60);
-    await frame(0.35);
+    await frame(0.8);
     await page.evaluate(() => window.setShot(2));
     await sleep(250);
-    await frame(3.2);
+    await frame(2.8); // ffmpeg (concat) pokazuje ostatnią klatkę dwa razy dłużej → ok. 5,5 s
 
     const copied = await page.evaluate(() => document.documentElement.dataset.rectSelectCopied);
     if (!copied || copied.split('\n').length !== 6) throw new Error(`${lang}: skopiowano „${copied}”`);
