@@ -20,6 +20,7 @@
     "test:unit": "node test/unit.test.mjs",
     "serve": "node test/serve.mjs",
     "store:assets": "node scripts/store-assets.mjs",
+    "demo": "node scripts/demo-gif.mjs",
     "id": "node scripts/id.mjs",
     "stats": "node scripts/stats.mjs"
   },
