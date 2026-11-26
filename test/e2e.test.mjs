@@ -13,7 +13,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ext = path.join(root, 'dist-test');
 const browserPath = process.env.BROWSER || 'C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe';
 const headless = !process.env.HEADFUL;
-const EXT_ID = 'fikgakmekkffphhlgmicclllblekeeoh'; // stałe ID z klucza w manifeście
+const EXT_ID = 'ehfclhgpdpfjhkapbmpgnommgecdpnei'; // ID z klucza w manifeście = ID w Chrome Web Store
 const WELCOME = `chrome-extension://${EXT_ID}/welcome/welcome.html`;
 
 const server = http

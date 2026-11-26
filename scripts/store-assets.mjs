@@ -16,7 +16,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ext = path.join(root, 'dist-test');
 const out = path.join(root, 'store', 'out');
 const browserPath = process.env.BROWSER || 'C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe';
-const EXT_ID = 'fikgakmekkffphhlgmicclllblekeeoh';
+const EXT_ID = 'ehfclhgpdpfjhkapbmpgnommgecdpnei';
 const ALL = ['en', 'pl', 'de', 'fr', 'it', 'es', 'uk'];
 const langs = process.argv.slice(2).filter((a) => ALL.includes(a));
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
